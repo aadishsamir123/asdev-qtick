@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 General Questions & Discussions
+    url: https://github.com/aadishsamir123/asdev-qtick/discussions
+    about: Ask questions, share ideas, or discuss the app with the community
+  - name: 📖 Documentation
+    url: https://github.com/aadishsamir123/asdev-qtick/blob/main/README.md
+    about: Check the README for installation and usage instructions
+  - name: 🤝 Contributing Guide
+    url: https://github.com/aadishsamir123/asdev-qtick/blob/main/CONTRIBUTING.md
+    about: Learn how to contribute to QTick development
