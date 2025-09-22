@@ -12,7 +12,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "QTick Documentation",
   tagline: "Smart QR Attendance Tracking - Simple, Fast, Reliable",
-  favicon: "img/favicon.ico",
+  favicon: "img/qtick-logo.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
