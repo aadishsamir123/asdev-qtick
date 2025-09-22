@@ -1,7 +1,7 @@
 # QTick - Smart QR Attendance Tracking 📱
 
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/aadishsamir123/asdev-qtick)
-[![Flutter](https://img.shields.io/badge/Flutter-3.35.3+-02569B.svg?logo=flutter)](https://flutter.dev)
+[![Flutter](https://img.shields.io/badge/Flutter-3.27.0+-02569B.svg?logo=flutter)](https://flutter.dev)
 [![Platform](https://img.shields.io/badge/platform-Android-green.svg)](https://play.google.com/store)
 
 QTick is a modern, intuitive QR code-based attendance tracking application built with Flutter. Designed for educational institutions, workplaces, and events, QTick provides a seamless way to track attendance with QR code scanning technology.
