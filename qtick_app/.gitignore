@@ -1,0 +1,166 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Android signing keys and certificates
+android/key.properties
+android/app/key.properties
+**/*.keystore
+**/*.jks
+**/*.p12
+**/*.key
+**/*.pem
+
+# iOS signing and certificates
+ios/Runner/GoogleService-Info.plist
+ios/firebase_app_id_file.json
+**/ios/**/Info.plist
+ios/Runner.xcworkspace/xcshareddata/
+ios/Runner.xcodeproj/xcshareddata/
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Android local configuration files
+android/local.properties
+android/gradle.properties
+android/.gradle/
+android/captures/
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+
+# Firebase and Google Services
+google-services.json
+GoogleService-Info.plist
+firebase_options.dart
+
+# API Keys and Secrets
+.env
+.env.local
+.env.development
+.env.production
+config/
+secrets/
+**/*secrets*
+**/*config*.json
+**/*key*.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Log files
+*.log
+logs/
+log/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Personal/Local files
+**/personal/
+**/private/
+**/.local/
+
+# Generated files
+**/Generated.xcconfig
+**/generated_plugin_registrant.dart
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Coverage files
+coverage/
+*.lcov
+
+# Test related
+test_driver/
+integration_test/screenshots/
+test/coverage/
+
+# Web related
+web/icons/
+web/splash/
+
+# Additional Flutter/Dart files to ignore
+.packages
+pubspec.lock
+
+# macOS specific
+.DS_Store
+**/.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux specific
+*~
+
+# Editor specific
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/.ropeproject
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Personal user directories and files
+**/Users/*/
+user_data/
+personal/
