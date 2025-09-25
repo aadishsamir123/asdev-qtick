@@ -32,8 +32,8 @@ android {
         applicationId = "com.aadishsamir.qr_attendance"
         targetSdk = 36
         minSdk = 24
-        versionName = "2.0.0"
-        versionCode = 10
+        versionName = "2.0.1"
+        versionCode = 11
     }
     
     signingConfigs {

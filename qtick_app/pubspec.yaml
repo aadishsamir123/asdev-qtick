@@ -2,7 +2,7 @@ name: qr_attendance
 description: "QTick - Smart QR Attendance Tracking"
 publish_to: "none"
 
-version: 2.0.0
+version: 2.0.1
 
 environment:
   sdk: ^3.7.2
