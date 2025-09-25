@@ -428,7 +428,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                         color: AppTheme.appBlue,
                       ),
                       label: Text(
-                        'Teacher Area',
+                        'Admin Panel',
                         style: TextStyle(fontSize: 16, color: AppTheme.appBlue),
                       ),
                       style: OutlinedButton.styleFrom(
