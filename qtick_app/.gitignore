@@ -66,12 +66,9 @@ ios/Runner/GeneratedPluginRegistrant.*
 
 # Android local configuration files
 android/local.properties
-android/gradle.properties
 android/.gradle/
 android/captures/
-android/gradlew
-android/gradlew.bat
-android/gradle/wrapper/gradle-wrapper.jar
+android/java_pid53772.hprof
 
 # Firebase and Google Services
 google-services.json
