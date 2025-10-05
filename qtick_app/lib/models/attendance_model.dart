@@ -2,6 +2,10 @@ import 'package:flutter/foundation.dart';
 import 'package:qr_attendance/models/attendance_record.dart';
 import 'package:qr_attendance/services/database_service.dart';
 import 'package:qr_attendance/services/export_service.dart';
+import 'package:qr_attendance/services/whatsapp_business_service.dart';
+import 'package:qr_attendance/models/student_contact.dart';
+import 'package:qr_attendance/models/whatsapp_config.dart';
+import 'package:qr_attendance/models/message_log.dart';
 
 class AttendanceModel extends ChangeNotifier {
   final DatabaseService _databaseService = DatabaseService();
@@ -32,11 +36,50 @@ class AttendanceModel extends ChangeNotifier {
     try {
       await _databaseService.insertAttendanceRecord(record);
       await loadAttendanceRecords(); // Refresh the list
+
+      // Send WhatsApp notification
+      await _sendWhatsAppNotification(record);
+
       return true;
     } catch (e) {
       _errorMessage = 'Failed to add attendance record: $e';
       notifyListeners();
       return false;
+    }
+  }
+
+  /// Send WhatsApp notification for attendance record
+  Future<void> _sendWhatsAppNotification(AttendanceRecord record) async {
+    try {
+      // Get WhatsApp configuration
+      final config = await _databaseService.getWhatsAppConfig();
+      if (config == null) {
+        // No WhatsApp configuration found, skip notification
+        return;
+      }
+
+      // Get active student contacts
+      final contacts = await _databaseService.getActiveStudentContacts();
+      if (contacts.isEmpty) {
+        // No contacts available, skip notification
+        return;
+      }
+
+      // Send WhatsApp notification
+      final messageLog =
+          await WhatsAppBusinessService.sendAttendanceNotification(
+            config: config,
+            attendanceRecord: record,
+            contacts: contacts,
+          );
+
+      // Save message log if a message was sent
+      if (messageLog != null) {
+        await _databaseService.insertMessageLog(messageLog);
+      }
+    } catch (e) {
+      // Log the error but don't prevent attendance recording
+      debugPrint('Failed to send WhatsApp notification: $e');
     }
   }
 

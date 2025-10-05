@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:qr_attendance/screens/settings_screen.dart';
 import 'package:qr_attendance/screens/debug_update_screen.dart';
 import 'package:qr_attendance/screens/customize_screen.dart';
+import 'package:qr_attendance/screens/whatsapp_management_screen.dart';
 import 'package:qr_attendance/models/attendance_model.dart';
 import 'package:qr_attendance/models/attendance_record.dart';
 import 'package:qr_attendance/services/settings_service.dart';
@@ -849,6 +850,28 @@ class _MoreOptionsScreenState extends State<MoreOptionsScreen> {
                 subtitle: const Text('Bulk delete attendance records'),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: _showDeleteDialog,
+              ),
+            ),
+
+            const SizedBox(height: 8),
+
+            // WhatsApp Business Option
+            Card(
+              child: ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.green.withValues(alpha: 0.1),
+                  child: const Icon(Icons.message, color: Colors.green),
+                ),
+                title: const Text('WhatsApp Business'),
+                subtitle: const Text('Configure message notifications'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const WhatsAppManagementScreen(),
+                    ),
+                  );
+                },
               ),
             ),
 

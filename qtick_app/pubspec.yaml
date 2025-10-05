@@ -2,7 +2,7 @@ name: qr_attendance
 description: "QTick - Smart QR Attendance Tracking"
 publish_to: "none"
 
-version: 2.0.1
+version: 3.0.0
 
 environment:
   sdk: ^3.7.2
@@ -49,6 +49,10 @@ dependencies:
   path_provider: ^2.1.0
   csv: ^6.0.0
   share_plus: ^10.0.2
+  file_picker: ^8.1.2
+
+  # WhatsApp Business API and HTTP requests
+  http: ^1.2.2
 
   # App update functionality
   in_app_update: ^4.2.3
