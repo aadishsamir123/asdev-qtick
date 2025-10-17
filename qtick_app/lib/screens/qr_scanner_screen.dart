@@ -22,29 +22,6 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
   MobileScannerController? _controller;
   final AudioService _audioService = AudioService();
 
-  // Helper methods for orientation and device detection
-  bool get _isTablet {
-    final size = MediaQuery.of(context).size;
-    return size.shortestSide >= 600;
-  }
-
-  bool get _isLandscape {
-    final size = MediaQuery.of(context).size;
-    return size.width > size.height;
-  }
-
-  // Calculate rotation based on device and orientation
-  double get _cameraRotation {
-    if (!_isTablet) return 0.0; // No rotation needed for phones
-
-    if (_isLandscape) {
-      // For tablets in landscape mode, front camera needs 90° rotation
-      return 1.5708; // 90 degrees in radians (π/2)
-    }
-
-    return 0.0; // No rotation needed for portrait
-  }
-
   @override
   void initState() {
     super.initState();
@@ -71,32 +48,14 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
     super.dispose();
   }
 
-  // Build orientation-aware scanner widget
+  // Build scanner widget without rotation
   Widget _buildOrientationAwareScanner() {
-    if (!_isTablet) {
-      // For phones, use scanner as-is
-      return MobileScanner(controller: _controller!, onDetect: _onDetect);
-    }
-
-    // For tablets, apply orientation correction
-    if (_isLandscape) {
-      // In landscape mode on tablets, rotate the camera view
-      return Transform.rotate(
-        angle: _cameraRotation,
-        child: MobileScanner(
-          controller: _controller!,
-          onDetect: _onDetect,
-          fit: BoxFit.cover, // Ensure proper fit
-        ),
-      );
-    } else {
-      // In portrait mode on tablets, use scanner normally
-      return MobileScanner(
-        controller: _controller!,
-        onDetect: _onDetect,
-        fit: BoxFit.cover,
-      );
-    }
+    // Use scanner without any rotation for all devices
+    return MobileScanner(
+      controller: _controller!,
+      onDetect: _onDetect,
+      fit: BoxFit.cover,
+    );
   }
 
   void _onDetect(BarcodeCapture barcodeCapture) {
