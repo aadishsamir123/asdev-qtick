@@ -1,6 +1,6 @@
 # QTick - Smart QR Attendance Tracking 📱
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/aadishsamir123/asdev-qtick)
+[![Android](https://img.shields.io/endpoint?color=green&logo=google-play&url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.aadishsamir.qr_attendance%26gl%3DUS%26hl%3Den%26l%3DAndroid%2520Stable%26m%3D%24version)](https://play.google.com/store/apps/details?id=com.aadishsamir.qr_attendance)
 [![Flutter](https://img.shields.io/badge/Flutter-3.27.0+-02569B.svg?logo=flutter)](https://flutter.dev)
 [![Platform](https://img.shields.io/badge/platform-Android-green.svg)](https://play.google.com/store)
 
@@ -50,7 +50,7 @@ QTick is a modern, intuitive QR code-based attendance tracking application built
 
 #### Option 1: Play Store (Recommended)
 
-The app is currently in **closed testing** on Google Play Store. See the [Join Closed Testing](#-join-closed-testing) section below for instructions.
+[https://play.google.com/store/apps/details?id=com.aadishsamir.qr_attendance](https://play.google.com/store/apps/details?id=com.aadishsamir.qr_attendance)
 
 #### Option 2: Build from Source
 
@@ -65,39 +65,6 @@ flutter pub get
 # Run the app
 flutter run
 ```
-
-## 🧪 Join Closed Testing
-
-QTick is currently available through Google Play Store's **Internal Testing Program**. Follow these steps to join:
-
-### Step 1: Get Access
-
-**Join the Google Group**: Go to [groups.google.com/asdev-testers](https://groups.google.com/asdev-testers) and join the group.
-
-### Step 2: Download the App
-
-**Download from Play Store**:
-
-- Open the link: [play.google.com/store/apps/details?id=com.aadishsamir.qr_attendance](https://play.google.com/store/apps/details?id=com.aadishsamir.qr_attendance)
-- Install the app (it will show as "Early Access")
-
-### Step 3: Provide Feedback
-
-- **Bug Reports**: Use the in-app feedback system or email
-- **Feature Requests**: Share your suggestions for improvements
-- **Performance Issues**: Report any crashes or slow performance
-
-Feedback can be provided via [GitHub Issues](https://github.com/aadishsamir123/asdev-qtick/issues)
-
-### Testing Guidelines
-
-- ✅ Test core QR scanning functionality
-- ✅ Try both arrival and departure modes
-- ✅ Test export/delete functionality
-- ✅ Verify data persistence across app restarts
-- ✅ Check admin panel features
-- ❗ Report any crashes immediately
-- ❗ Note any UI/UX inconsistencies
 
 ## 📋 How to Use
 
