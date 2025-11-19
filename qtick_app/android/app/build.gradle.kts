@@ -17,7 +17,7 @@ if (keystorePropertiesFile.exists()) {
 android {
     namespace = "com.aadishsamir.qr_attendance"
     compileSdk = 36
-    ndkVersion = "27.0.12077973"
+    ndkVersion = "28.2.13676358"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -33,7 +33,7 @@ android {
         targetSdk = 36
         minSdk = 25
         versionName = "4.0.0"
-        versionCode = 15
+        versionCode = 16
     }
     
     signingConfigs {
