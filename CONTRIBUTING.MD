@@ -37,7 +37,7 @@ Before contributing, ensure you have:
 
    To fork press the below button:
 
-   [![Fork repository button](assets/readme/buttons/fork.png)](https://github.com/aadishsamir123/asdev-qtick/fork)
+   [![Fork repository button](qtick_app/assets/readme/buttons/fork.png)](https://github.com/aadishsamir123/asdev-qtick/fork)
 
    ```bash
    git clone https://github.com/YOUR_USERNAME/asdev-qtick.git
