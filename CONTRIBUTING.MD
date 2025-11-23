@@ -37,11 +37,11 @@ Before contributing, ensure you have:
 
    To fork press the below button:
 
-   [![Fork repository button](qtick_app/assets/readme/buttons/fork.png)](https://github.com/aadishsamir123/asdev-qtick/fork)
+   [![Fork repository button](qtick_app/assets/readme/buttons/fork.png)](https://github.com/ASDev-Official/qtick/fork)
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/asdev-qtick.git
-   cd asdev-qtick
+   git clone https://github.com/YOUR_USERNAME/qtick.git
+   cd qtick
    ```
 
 2. **Set up the development environment**
@@ -80,9 +80,6 @@ Before contributing, ensure you have:
 3. **Test your changes**
 
    ```bash
-   # Run tests
-   flutter test
-
    # Check for linting issues
    flutter analyze
 
@@ -233,54 +230,10 @@ We welcome contributions for:
 
 ## Testing
 
-### Running Tests
-
-```bash
-# Run all tests
-flutter test
-
-# Run tests with coverage
-flutter test --coverage
-
-# Run specific test file
-flutter test test/models/attendance_model_test.dart
-```
-
 ### Test Requirements
 
-- **Unit tests**: For models and services
-- **Widget tests**: For custom widgets
 - **Manual testing**: Test on real devices
 - **Performance testing**: For camera and database operations
-
-### Test Structure
-
-```dart
-// test/models/attendance_model_test.dart
-import 'package:flutter_test/flutter_test.dart';
-import 'package:qr_attendance/models/attendance_model.dart';
-
-void main() {
-  group('AttendanceModel', () {
-    test('should create valid attendance record', () {
-      // Arrange
-      final timestamp = DateTime.now();
-
-      // Act
-      final record = AttendanceRecord(
-        id: 'test-id',
-        timestamp: timestamp,
-        type: AttendanceType.arrival,
-      );
-
-      // Assert
-      expect(record.id, equals('test-id'));
-      expect(record.timestamp, equals(timestamp));
-      expect(record.type, equals(AttendanceType.arrival));
-    });
-  });
-}
-```
 
 ## Documentation
 
